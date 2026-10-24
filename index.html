@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steal My Money</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="masthead">
+        <p class="eyebrow">A puzzle gauntlet of impossible proportions</p>
+        <h1>Steal My Money</h1>
+        <p class="subtitle">100 puzzles. 1 reward. 0 actual money.</p>
+      </header>
+
+      <section class="progress-panel">
+        <div class="progress-meta">
+          <span id="progress-label">Puzzle 1 of 100</span>
+          <span id="progress-percent">1%</span>
+        </div>
+        <div class="progress-track" aria-label="Puzzle progress">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </section>
+
+      <main id="game-area" class="game-area">
+        <article class="puzzle-card" aria-live="polite">
+          <span id="puzzle-badge" class="puzzle-badge">Puzzle 1</span>
+          <h2 id="puzzle-question">Loading puzzle...</h2>
+          <div id="answer-options" class="answer-options"></div>
+        </article>
+      </main>
+
+      <section id="reward-section" class="reward-section hidden" aria-live="polite">
+        <h2>You completed the impossible.</h2>
+        <p>The final reward has been unlocked.</p>
+        <button id="money-button" class="money-button">click here for my money</button>
+      </section>
+    </div>
+
+    <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
+
+    <div id="reward-modal" class="reward-modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-panel">
+        <h3 id="modal-title">Nope.</h3>
+        <p>You really thought I would gitve you money</p>
+        <button id="close-modal" class="close-modal">close</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
